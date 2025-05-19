@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Layoff Prediction</title>
+  <link rel="stylesheet" href="prediction.css">
+  <script src="predict.js"></script>
+
+</head>
+<body>
+  <div class="container">
+    <h1>Layoff Prediction</h1>
+    <div class="card">
+      <input type="file" id="trainingData" hidden>
+      <label for="trainingData" class="button">Upload Training Dataset</label>
+
+      <input type="file" id="testingData" hidden>
+      <label for="testingData" class="button">Upload Testing Dataset</label>
+
+      <button id="runPredictionBtn">Run Prediction</button>
+
+    </div>
+  </div>
+  <script src="predict.js"></script>
+</body>
+</html>

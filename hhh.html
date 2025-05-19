@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Employee Data Form</title>
+<style>
+  body {
+    background-color: #0a0a23;
+    color: #4da6ff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 20px;
+  }
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px 40px;
+  }
+  label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
+  }
+  input[type="text"], input[type="number"], select {
+    width: 100%;
+    padding: 8px 10px;
+    font-size: 14px;
+    color: #cce6ff;
+    background-color: #14142b;
+    border: 1px solid #333355;
+    border-radius: 5px;
+    outline: none;
+  }
+  input[type="text"]:focus, input[type="number"]:focus, select:focus {
+    border-color: #4da6ff;
+    background-color: #1a1a40;
+  }
+  select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml;charset=US-ASCII,%3csvg%20fill='%234da6ff'%20height='24'%20viewBox='0%200%2024%2024'%20width='24'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M7%2010l5%205%205-5z'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 12px;
+  }
+  .btn-predict {
+    grid-column: 1 / -1;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4da6ff;
+    color: #0a0a23;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+    justify-self: center;
+    width: 150px;
+  }
+  .btn-predict:hover {
+    background-color: #3a8dd9;
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <form>
+      <label for="age">Age</label>
+      <input type="number" id="age" name="age" value="45" />
+
+      <label for="department">Department</label>
+      <select id="department" name="department">
+        <option>Sales</option>
+        <option>Marketing</option>
+        <option>HR</option>
+        <option>IT</option>
+        <option>Finance</option>
+      </select>
+
+      <label for="distance">DistanceFromHome(km)</label>
+      <input type="number" id="distance" name="distance" value="8" />
+
+      <label for="educationfield">EducationField</label>
+      <select id="educationfield" name="educationfield">
+        <option>Life Sciences</option>
+        <option>Medical</option>
+        <option>Marketing</option>
+        <option>Technical Degree</option>
+        <option>Other</option>
+      </select>
+
+      <label for="employeenumber">EmployeeNumber</label>
+      <input type="number" id="employeenumber" name="employeenumber" value="1010" />
+
+      <label for="jobsatisfaction">JobSatisfaction</label>
+      <select id="jobsatisfaction" name="jobsatisfaction">
+        <option>Male</option>
+        <option>Female</option>
+      </select>
+
+      <label for="jobrole">JobRole</label>
+      <select id="jobrole" name="jobrole">
+        <option>Sales Executive</option>
+        <option>Research Scientist</option>
+        <option>Laboratory Technician</option>
+        <option>Manufacturing Director</option>
+        <option>Healthcare Representative</option>
+        <option>Manager</option>
+      </select>
+
+      <label for="monthlyincome">MonthlyIncome</label>
+      <input type="number" id="monthlyincome" name="monthlyincome" value="5500" />
+
+      <label for="numcompaniesworked">NumCompaniesWorked</label>
+      <input type="number" id="numcompaniesworked" name="numcompaniesworked" value="1" />
+
+      <label for="overtime">OverTime</label>
+      <select id="overtime" name="overtime">
+        <option>No</option>
+        <option>Yes</option>
+      </select>
+
+      <label for="percentsalaryhike">PercentSalaryHike</label>
+      <input type="number" id="percentsalaryhike" name="percentsalaryhike" value="14" />
+
+      <label for="performance">Performance</label>
+      <select id="performance" name="performance">
+        <option>Meets Expectation</option>
+        <option>Exceeds Expectation</option>
+        <option>Below Expectation</option>
+      </select>
+
+      <label for="stockoptionlevel">StockOptionLevel</label>
+      <select id="stockoptionlevel" name="stockoptionlevel">
+        <option>Bad</option>
+        <option>Good</option>
+        <option>Excellent</option>
+      </select>
+
+      <label for="totalworkingyears">TotalWorkingYears</label>
+      <input type="number" id="totalworkingyears" name="totalworkingyears" value="20" />
+
+      <label for="yearsincurrentrole">YearsInCurrentRole</label>
+      <input type="number" id="yearsincurrentrole" name="yearsincurrentrole" value="4" />
+
+      <label for="yearsatcompany">YearsAtCompany</label>
+      <input type="number" id="yearsatcompany" name="yearsatcompany" value="5" />
+
+      <label for="yearswithcurrmanager">YearsWithCurrManager</label>
+      <input type="number" id="yearswithcurrmanager" name="yearswithcurrmanager" value="4" />
+
+      <label for="yearssincelastpromotion">YearsSinceLastPromotion</label>
+      <input type="number" id="yearssincelastpromotion" name="yearssincelastpromotion" value="1" />
+
+      
+      
+      <button type="submit" class="btn-predict">Predict</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById('department').value = 'Sales';
+    document.getElementById('educationfield').value = 'Life Sciences';
+    document.getElementById('jobsatisfaction').value = 'Male';
+    document.getElementById('jobrole').value = 'Sales Executive';
+    document.getElementById('overtime').value = 'No';
+    document.getElementById('performance').value = 'Meets Expectation';
+    document.getElementById('stockoptionlevel').value = 'Bad';
+   
+  </script>
+</body>
+</html>
